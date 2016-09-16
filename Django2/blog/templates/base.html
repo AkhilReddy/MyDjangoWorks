@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>AKHIL'S BLOG</title>
+	<meta charset="utf-8" />
+
+	<link rel="stylesheet" href="/static/css/styles.css" type = "text/css"/>
+	<meta name="viewport content = "width-device-width, initial-scale=1.0">
+    <style>
+a:link {
+    color:#FF0BF4;
+    background-color:transparent;
+    text-decoration:none;
+}
+a:visited {
+    color:#21FFFF;
+    background-color:transparent;
+    text-decoration:none;
+}
+a:hover {
+    color:#ff0000;
+    background-color:transparent;
+    text-decoration:underline;
+}
+a:active {
+    color:#ff0000;
+    background-color:transparent;
+    text-decoration:underline;
+}
+</style>
+</head>
+
+<body class="body" bgcolor="#E6E6FA" >
+<h1>AKHIL'S SAMPLE BLOG</h1>
+	<header class="mainHead">
+        
+		<!---img src="img/blogmainlogo.jpg" alt="The official Django Icon" width="1010" height="144"--->
+        <img src="/static/img/blogmainlogo.jpg" width="1010" height="144">
+		<nav><ul>
+			<li><a href='/'>Home</a></li>
+			<li><a href='/blog/'>Blog</a></li>
+			<li><a href='/blog/latestnews/'>News</a></li>
+			<li><a href='/blog/latestnews/'>Archive</a></li>
+		
+		</ul></nav>
+        <img src="/static/img/programming.gif" alt="Computer man" style="width:48px;height:48px">
+	</header>
+	
+	<aside class="sideInfo">
+		<article>
+			<h3>Recent News</h3>
+			{% for post in object_list %}
+			<p>{{ post.date|date:"Y-m-d" }}<a href="/blog/{{post.id}}"> {{ post.title }}</a></p>
+			{% endfor %}
+		</article>
+	</aside>
+
+	
+{% block content %}
+{% endblock %}	
+
+	
+	
+	<footer class="mainFooter">
+		<p> copyright &copy; 2013</p>
+	</footer>
+
+</body>
+
+
+</html>

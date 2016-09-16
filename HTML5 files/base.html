@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>AKHIL'S BLOG</title>
+	<meta charset="utf-8" />
+    
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <meta name="viewport content = "width-device-width, initial-scale=1.0">
+</head>
+
+<body class="body" bgcolor="#E6E6FA"  >
+<h1>My Personal CV</h1>
+
+	<header class="mainHead">
+        <img src="img/blogmainlogo.jpg" alt="It's Image for Header of the blog" width="1010" height="144">
+  <!---   <p class="logoText">Akhil's Logo</p> --->
+		<nav><ul>
+			<li><a class = 'active' href='/'>Home</a></li> 
+			<li><a href='/blog/'>Blog</a></li>
+			<li><a href='/blog/latestnews/'>News</a></li>
+			<li><a href='/blog/latestnews/'>Archive</a></li>
+		</ul></nav>
+	</header>
+    
+    <aside class="sideInfo">
+		<article>
+			<h3>Recent News</h3>
+            (% for post in object_list %)
+			<p>No New Recent News Sir!!</p>
+            <p>{{ post.date|date:"Y-m-d" }}<a href="/blog/{{post.id}}"> {{ post.title }}</a></p>
+			{% endfor %}
+		</article>
+	</aside>
+    
+    <div class="maincontent">
+         <div class="content">
+            <article class="typicalArticle">
+               <header >
+                 <h3><a href="#" title="latestPost">Epic Information</a></h3>
+               </header >
+               
+               <footer>
+                 <p class="postInfo">Posted on December 2014</p>
+               </footer>
+               
+               <content>
+                 <p>I am Marla Akhil Reddy.I am a Computer Science Student</p>
+               </content>
+            </article>
+         </div>
+         
+         <div class="content">
+            <article class="typicalArticle">
+               <header >
+                 <h3><a href="#" title="latestPost">Epic Information</a></h3>
+               </header >
+               
+               <footer>
+                 <p class="postInfo">Posted on December 2014</p>
+               </footer>
+               
+               <content>
+                 <p>I am Marla Akhil Reddy.I am a Computer Science Student</p>
+               </content>
+            </article>
+         </div>
+         
+         <div class="content">
+            <article class="typicalArticle">
+               <header >
+                 <h3><a href="#" title="latestPost">Epic Information</a></h3>
+               </header >
+               
+               <footer>
+                 <p class="postInfo">Posted on December 2014</p>
+               </footer>
+               
+               <content>
+                 <p>I am Marla Akhil Reddy.I am a Computer Science Student</p>
+               </content>
+            </article>
+         </div>
+    </div>
+    
+    <footer class="mainFooter">
+       <p>copyright &copy; 2015</p>
+    </footer>
+</body>
+</html>
